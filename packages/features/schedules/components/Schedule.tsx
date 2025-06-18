@@ -343,6 +343,19 @@ const TimeRangeField = ({
   // this is a controlled component anyway given it uses LazySelect, so keep it RHF agnostic.
   return (
     <div className={cn("flex flex-row gap-2 sm:gap-3", className)}>
+      <div className="flex items-center justify-between">
+        <Switch
+          value={value.isMostActive}
+          disabled={disabled}
+          checked={value.isMostActive}
+          data-testid="most-active-switch"
+          onCheckedChange={(isChecked) => {
+            isChecked
+              ? onChange({ ...value, isMostActive: true })
+              : onChange({ ...value, isMostActive: false });
+          }}
+        />
+      </div>
       <LazySelect
         userTimeFormat={userTimeFormat}
         className="block w-[90px] sm:w-[100px]"

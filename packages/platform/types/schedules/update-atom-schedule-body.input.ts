@@ -9,6 +9,10 @@ export class ScheduleTimeRangeDto {
   @Type(() => Date)
   @IsDate()
   end!: Date;
+
+  @IsBoolean()
+  @IsOptional()
+  isMostActive?: boolean;
 }
 
 export class ScheduleDto {

@@ -18,6 +18,7 @@ export const availabilityUserSelect = Prisma.validator<Prisma.UserSelect>()({
           date: true,
           startTime: true,
           endTime: true,
+          isMostActive: true,
           days: true,
         },
       },

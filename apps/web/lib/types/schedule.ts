@@ -1,6 +1,7 @@
 export type TimeRange = {
   start: Date;
   end: Date;
+  isMostActive?: boolean; // Optional property to indicate if this time range is the most active
 };
 
 export type Schedule = TimeRange[][];

@@ -88,6 +88,7 @@ export const transformScheduleToAvailabilityForAtom = (schedule: { availability:
               availability.endTime.getUTCMinutes()
             )
           ),
+          isMostActive: availability.isMostActive ?? false,
         });
       });
       return schedule;

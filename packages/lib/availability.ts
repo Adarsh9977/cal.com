@@ -29,6 +29,7 @@ export function getAvailabilityFromSchedule(schedule: Schedule): Availability[] 
         days: [day],
         startTime: time.start,
         endTime: time.end,
+        isMostActive: time.isMostActive ?? false,
       } as Availability);
 
     const filteredTimes = times.filter((time) => {

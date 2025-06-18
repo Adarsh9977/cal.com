@@ -420,7 +420,13 @@ const _getAvailableSlots = async ({ input, ctx }: GetScheduleOptions): Promise<I
     shouldServeCache,
   });
 
+  console.log("hello1", allUsersAvailability[0].dateRanges);
+  console.log("hello2", usersWithCredentials);
+  console.log("hello3", currentSeats);
+
   let aggregatedAvailability = getAggregatedAvailability(allUsersAvailability, eventType.schedulingType);
+
+  console.log("aggring", aggregatedAvailability);
 
   // Fairness and Contact Owner have fallbacks because we check for within 2 weeks
   if (hasFallbackRRHosts) {
